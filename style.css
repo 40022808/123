@@ -1,0 +1,181 @@
+* {
+    padding: 0;
+    margin: 0;
+
+}
+
+/* 针对WebKit浏览器（如Chrome和Safari） */
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+h1 {
+    font-size: 3vw;
+}
+
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.对错 {
+margin-top: 5vh;
+font-size: 2vw;
+}
+
+.题目 {
+    margin-top: 15vh;
+    min-width: 80vh; /* 初始宽度 */
+    width: fit-content; /* 根据内容调整宽度 */
+    border: solid black 2px;
+    border-radius: 8px;
+    padding: 20px;
+    display: flex;
+}
+
+.数字, .符号 {
+    min-width: 8vmin; /* 初始宽度 */
+    height: 8vmin;
+    width: fit-content; /* 根据内容调整宽度 */
+    border: solid black 1px;
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin-left: 3vw;
+    font-size: 7vmin;
+}
+
+
+
+#答案 {
+    text-align: center;
+    margin-right: 3vw;
+    max-width: 20vmin;
+}
+
+.按钮组 {
+    margin-top: 15vh;
+}
+
+.下一题 {
+    font-size: 6vmin;
+    padding: 5px;
+}
+
+.确定 {
+    font-size: 6vmin;
+    padding: 5px;
+    display: none;
+}
+
+.弹窗 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+
+}
+
+.弹窗2 {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9999;
+
+}
+
+.弹窗_box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 35vh;
+    height: 30vh;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5vmin;
+    border-radius: 1vmin;
+}
+
+
+.弹窗_text {
+    background-color: #fff;
+    width: 50vw;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 4vmin;
+    text-align: center;
+    
+}
+.弹窗_box2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    top: 35vh;
+    height: 30vh;
+    justify-content: space-between;
+    background-color: white;
+    padding: 5vmin;
+    border-radius: 1vmin;
+}
+
+
+.弹窗_text2 {
+    background-color: #fff;
+    width: 50vw;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    font-size: 4vmin;
+    text-align: center;
+    
+}
+
+
+.弹窗_关闭 {
+    color: black;
+    background-color: aqua;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    padding: 2vmin;
+}
+
+.倒计时 {
+    border: solid black 2px;
+    border-radius: 5px;
+    align-items: center;
+    padding: 15px;
+    font-size: 1vw;
+    margin-top: 5vh;
+    display: none;
+}
+
+#countdown {
+    margin-left: 5px;
+}

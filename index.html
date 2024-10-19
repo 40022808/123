@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>成成数学</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <audio src="素材库/error1.mp3" id="error1"></audio>
+    <audio src="素材库/按钮1.mp3" id="按钮1"></audio>
+    <audio src="素材库/按钮2.mp3" id="按钮2"></audio>
+
+    
+    <div class="container">
+
+        <h1>成成数学</h1>
+
+        <div class="对错">
+            <div class="对">答对数量:0</div>
+            <div class="错">答错数量:0</div>
+        </div>
+
+        <div class="倒计时">
+            <div>倒计时:</div>
+            <div id="countdown"></div>
+        </div>
+
+        <div class="题目">
+            <div class="数字" id="第一个数字"></div>
+            <div class="符号" id="加减"></div>
+            <div class="数字" id="第二个数字"></div>
+            <div class="符号">=</div>
+            <input type="number" class="符号" id="答案" placeholder="?" oninput="this.value = this.value.slice(0, 4)">
+
+        </div>
+
+        <div class="按钮组">
+            <button class="下一题">下一题</button>
+            <button class="确定">确定</button>
+        </div>
+    </div>
+
+    <div class="弹窗">
+        <div class="弹窗_box">
+            <div class="弹窗_text">
+                弹窗功能出错!
+            </div>
+            <button class="弹窗_关闭">关闭</button>
+        </div>
+    </div>
+    
+    <div class="弹窗2">
+        <div class="弹窗_box2">
+            <div class="弹窗_text2">
+                弹窗功能出错!
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
