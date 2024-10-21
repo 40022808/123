@@ -8,10 +8,18 @@ document.getElementById('答案').addEventListener('input', function () {
 function 保存() {
     localStorage.setItem('保存对number', 对number);
 }
+const 对 = document.querySelector('.对')
+const 错 = document.querySelector('.错')
 
 
 const 保存对number = localStorage.getItem('保存对number')
-对number = 保存对number
+if (保存对number === null) {
+    对number = 0
+}
+else {
+    对number = 保存对number
+}
+
 对.innerHTML = '答对数量:' + 对number
 
 
@@ -155,8 +163,7 @@ function 判定2() {
 }
 
 
-const 对 = document.querySelector('.对')
-const 错 = document.querySelector('.错')
+
 var 对number = 0
 var 错number = 0
 
