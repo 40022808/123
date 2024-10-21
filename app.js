@@ -5,6 +5,16 @@ document.getElementById('答案').addEventListener('input', function () {
 });
 
 
+function 保存() {
+    localStorage.setItem('保存对number', 对number);
+}
+
+
+const 保存对number = localStorage.getItem('保存对number')
+对number = 保存对number
+对.innerHTML = '答对数量:' + 对number
+
+
 function getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
@@ -154,6 +164,7 @@ function 正确() {
     弹窗("正确")
     按钮1.play()
     对number = 对number + 1
+    保存()
     对.innerHTML = '答对数量:' + 对number
     确定.style.display = 'none'
     setTimeout(() => {
