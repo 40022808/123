@@ -34,7 +34,7 @@ function 获取() {
         错number = 保存错number
     }
     对.innerHTML = '答对数量:' + 对number
-    错.innerHTML = '答对数量:' + 错number
+    错.innerHTML = '答错数量:' + 错number
 }
 获取()
 
