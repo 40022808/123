@@ -5,6 +5,9 @@ document.getElementById('答案').addEventListener('input', function () {
 });
 
 
+var 对number
+var 错number
+
 function 保存() {
     localStorage.setItem('保存对number', 对number);
     localStorage.setItem('保存错number', 错number);
@@ -179,13 +182,12 @@ function 判定2() {
 
 
 
-var 对number = 0
-var 错number = 0
 
 function 正确() {
     弹窗("正确")
     按钮1.play()
-    对number = 对number + 1
+    对number = Number(对number) + 1
+    console.log(':'+对number)
     保存()
     获取()
     确定.style.display = 'none'
@@ -199,7 +201,8 @@ function 正确() {
 function 错误() {
     弹窗("错误")
     error1.play()
-    错number = 错number + 1
+    错number = Number(错number) + 1
+    console.log(错number)
     保存()
     获取()
     确定.style.display = 'none'
