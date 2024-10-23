@@ -7,20 +7,35 @@ document.getElementById('答案').addEventListener('input', function () {
 
 function 保存() {
     localStorage.setItem('保存对number', 对number);
+    localStorage.setItem('保存错number', 错number);
 }
+
+
 const 对 = document.querySelector('.对')
 const 错 = document.querySelector('.错')
 
-
-const 保存对number = localStorage.getItem('保存对number')
-if (保存对number === null) {
-    对number = 0
+function 获取() {
+    const 保存对number = localStorage.getItem('保存对number')
+    const 保存错number = localStorage.getItem('保存错number')
+    if (保存对number === null) {
+        对number = 0
+    }
+    else {
+        对number = 保存对number
+    }
+    
+    if (保存错number === null) {
+        错number = 0
+    }
+    else {
+        错number = 保存错number
+    }
+    对.innerHTML = '答对数量:' + 对number
+    错.innerHTML = '答对数量:' + 错number
 }
-else {
-    对number = 保存对number
-}
+获取()
 
-对.innerHTML = '答对数量:' + 对number
+
 
 
 function getRandomInt(min, max) {
@@ -172,7 +187,7 @@ function 正确() {
     按钮1.play()
     对number = 对number + 1
     保存()
-    对.innerHTML = '答对数量:' + 对number
+    获取()
     确定.style.display = 'none'
     setTimeout(() => {
         重置()
@@ -185,7 +200,8 @@ function 错误() {
     弹窗("错误")
     error1.play()
     错number = 错number + 1
-    错.innerHTML = '答错数量:' + 错number
+    保存()
+    获取()
     确定.style.display = 'none'
     setTimeout(() => {
         重置()
