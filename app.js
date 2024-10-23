@@ -187,7 +187,6 @@ function 正确() {
     弹窗("正确")
     按钮1.play()
     对number = Number(对number) + 1
-    console.log(':'+对number)
     保存()
     获取()
     确定.style.display = 'none'
@@ -202,7 +201,6 @@ function 错误() {
     弹窗("错误")
     error1.play()
     错number = Number(错number) + 1
-    console.log(错number)
     保存()
     获取()
     确定.style.display = 'none'
